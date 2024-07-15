@@ -19,9 +19,9 @@ $ vim /etc/locale.gen		(delete numbersign on en_US.UTF-8)
 $ locale-gen
 $ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 $ passwd 		(set passwd)
-$ echo "counterbalance" > /etc/hostname
-$ useradd -mG wheel -s /bin/bash cb
-$ passwd cb
+$ echo "HOSTNAME" > /etc/hostname
+$ useradd -mG wheel -s /bin/bash $user
+$ passwd $user
 $ sudo vim /etc/sudoers		(uncheck wheel)
 $ systemctl enable NetworkManager
 $ grub-install /dev/nvme0n1
